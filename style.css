@@ -88,5 +88,36 @@ ul{
   }
 
 
+  /* .spotify{
+
+    background-image: url("spotify.png");
+    position: absolute;
+    left: 590px;
+    top: 460px;
+    height: 50px;
+    width: 50px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    }
+
+
+    .box .spotify:hover{
+        color: #b9b9b9;
+    } */
+
+
+
+    canvas {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+
 
 
