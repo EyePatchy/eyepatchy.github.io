@@ -121,3 +121,24 @@ ul{
 
 
 
+    .biographic-box {
+        position: relative;
+      }
+      
+      .view-counter {
+        position: absolute;
+        bottom: 20px; 
+        left: 440px;   
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+      }
+      
+      .view-counter i {
+        margin-right: 5px;
+      }
+      
