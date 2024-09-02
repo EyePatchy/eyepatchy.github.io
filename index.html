@@ -4,7 +4,6 @@
 
         <meta charset="utf-8">
         <script src="d1341f9b7a.js"></script>
-        <script src="https://github-viewcount-default-rtdb.firebaseio.com/"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -100,56 +99,14 @@
     </ul>
 
 
-        <div class="view-counter">
-          <i class="fa fa-eye"></i> <span id="view-count">0</span>
-        </div>
 
 
         </div>
         </div>
-        </div>
-
-
-        <script>
-
-
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+    </div>
 
 
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAxOebVghc5diYQH0Dij2qIrK9a0Iv25bE",
-  authDomain: "github-viewcount.firebaseapp.com",
-  projectId: "github-viewcount",
-  storageBucket: "github-viewcount.appspot.com",
-  messagingSenderId: "762061549388",
-  appId: "1:762061549388:web:5a953b7ad499e46191a9e9",
-  measurementId: "G-J2DBEQ35ZV"
-};
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-          </script>
-
-
-<script>
-    const viewCountRef = database.ref('views/daily');
-  
-
-    viewCountRef.transaction(currentCount => {
-      if (currentCount === null) {
-        return 1; 
-      }
-      return currentCount + 1;
-    });
-
-    viewCountRef.on('value', snapshot => {
-      const count = snapshot.val();
-      document.getElementById('view-count').textContent = count;
-    });
-  </script>
   
 
         
