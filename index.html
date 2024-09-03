@@ -3,7 +3,7 @@
 <head>
 
 
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arta <i class="fas fa-user"></i></title>
@@ -14,10 +14,9 @@
     <script src="Scripts/d1341f9b7a.js"></script>
 
 
-
+    <!-- Music Button Styles -->
     <style>
 
-        /* Music Button Styles */
         #musicButton {
             position: fixed;
             top: 20px;
@@ -82,29 +81,31 @@
                     <li class="zoom"><a href="https://open.spotify.com/user/31pk24zwuhe2flq5ca7ogrgqbbn4" target="_blank"><i class="fa fa-music"></i></a></li>
                     <li class="zoom"><a href="https://namemc.com/profile/EyePatchy.2" target="_blank"><i class="fa fa-cube" aria-hidden="true"></i></a></li>
                 </ul>
+                <iframe style="border-radius: 40px;" src="https://lanyard-profile-readme.vercel.app/api/578637878779838486?theme=dark&bg=1e1e1e&animated=true" width="360" height="210" frameborder="0" allowtransparency="true"></iframe>
             </div>
         </div>
     </div>
 
 
 
-    <script>
-        // Music Button Toggle Script
-        const musicButton = document.getElementById('musicButton');
-        const backgroundMusic = document.getElementById('backgroundMusic');
-        let isPlaying = false;
+     <!-- Music Button Toggle Script -->
+     <script>
 
-        musicButton.addEventListener('click', () => {
-            if (isPlaying) {
-                backgroundMusic.pause();
-                musicButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
-            } else {
-                backgroundMusic.play();
-                musicButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-            }
-            isPlaying = !isPlaying;
-        });
-    </script>
+         const musicButton = document.getElementById('musicButton');
+         const backgroundMusic = document.getElementById('backgroundMusic');
+         let isPlaying = false;
+
+         musicButton.addEventListener('click', () => {
+             if (isPlaying) {
+                 backgroundMusic.pause();
+                 musicButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+             } else {
+                 backgroundMusic.play();
+                 musicButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+             }
+             isPlaying = !isPlaying;
+         });
+     </script>
 
 
 
