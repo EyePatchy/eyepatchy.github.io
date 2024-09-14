@@ -13,7 +13,8 @@ Welcome to my official biography page! This project showcases a modern and inter
 
 ## How to Run
 
-1. Clone this repository:
+- Clone this repository:
    ```bash
    git clone <repository-url>
+- Visit the webpage on eyepatchy.github.io
 
