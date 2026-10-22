@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arta — Developer &amp; graphic designer</title>
+    <meta name="description" content="Portfolio of Arta (EyePatchy): JavaScript developer and graphic designer." />
+    <meta name="theme-color" content="#08090a" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      (function () {
+        try {
+          var p = JSON.parse(localStorage.getItem("prefs-v1") || "null");
+          var t = p && (p.theme === "light" || p.theme === "dark") ? p.theme : matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          document.documentElement.dataset.theme = t; document.documentElement.style.colorScheme = t;
+        } catch (e) {}
+      })();
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arta — Developer & graphic designer" />
+    <meta property="og:description" content="JavaScript developer and graphic designer. Known as EyePatchy." />
+    <meta property="og:image" content="/media/profile.jpg" />
+    <link rel="icon" href="/head.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
