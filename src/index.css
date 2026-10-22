@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #08090a;
+  --color-surface: #0e0f11;
+  --color-line: #1e2024;
+  --color-fg: #f4f4f5;
+  --color-muted: #8a8f98;
+  --color-accent: #8ab4ff;
+  --color-steel: #a3b1c6;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+  --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --sq-light: #5d6779; --sq-dark: #2a313d; --board-edge: #151a21; --board-side: #0b0e12;
+  --p-w: #eef2f8; --p-w-edge: #0a0c10; --p-b: #12151a; --p-b-edge: #9aa6ba;
+  --shadow-ink: rgb(0 0 0 / 0.5);
+  --board-hi: color-mix(in srgb, var(--color-accent) 42%, transparent);
+}
+:root[data-theme="light"] {
+  --color-bg: #eceff3; --color-surface: #f8f9fb; --color-line: #d3d9e2; --color-fg: #0f1318; --color-muted: #566070; --color-accent: #2b5fd9; --color-steel: #52637b;
+  --sq-light: #e1e6ee; --sq-dark: #8e9cb3; --board-edge: #75819a; --board-side: #56627a;
+  --p-w: #fbfcfe; --p-w-edge: #3f4b61; --p-b: #1d232d; --p-b-edge: #05070a;
+  --shadow-ink: rgb(15 23 42 / 0.3);
+}
+
+html { scroll-behavior: smooth; color-scheme: dark; scrollbar-gutter: stable; }
+body { background: var(--color-bg); color: var(--color-fg); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+section[id] { scroll-margin-top: 4rem; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 0.5rem; }
+
+html.theme-fade, html.theme-fade *, html.theme-fade *::before, html.theme-fade *::after {
+  transition: background-color 0.4s var(--ease-fluid), color 0.4s var(--ease-fluid), border-color 0.4s var(--ease-fluid), fill 0.4s var(--ease-fluid), stroke 0.4s var(--ease-fluid) !important;
+}
+
+.link-u { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 0.45s var(--ease-fluid); }
+.link-u:hover, a:hover .link-u, a:focus-visible .link-u { background-size: 100% 1px; }
+
+@keyframes dash { to { stroke-dashoffset: -10; } }
+.pulse-line { stroke-dasharray: 3 7; animation: dash 1.4s linear infinite; }
+@keyframes soft-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+.soft-pulse { animation: soft-pulse 2s ease-in-out infinite; }
+
+.chess-stage { perspective: 1900px; --tilt: 46deg; }
+.chess-board { transform: rotateX(var(--tilt)); transform-style: preserve-3d; }
+.chess-board::after { content: ""; position: absolute; left: 0; top: 100%; width: 100%; height: 3.4%; transform-origin: top; transform: rotateX(-90deg); background: var(--board-side); }
+.chess-stand { transform-origin: 50% 100%; transform: rotateX(calc(var(--tilt) * -1)); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
