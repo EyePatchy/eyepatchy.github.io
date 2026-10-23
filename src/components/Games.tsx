@@ -74,7 +74,7 @@ function CounterStrike() {
         </div>
         <div className="text-sm leading-relaxed text-muted">
           <p>Logged before the move to CS2, so this is a snapshot of my CS:GO days.</p>
-          <p className="mt-3">TThat's roughly 208 days of playtime.</p>
+          <p className="mt-3">That's roughly 208 days of playtime.</p>
         </div>
       </div>
     </Panel>
